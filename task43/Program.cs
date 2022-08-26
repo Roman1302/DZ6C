@@ -5,17 +5,17 @@ b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5) */
 
 void IntersectionStraight(double x1, double y1, double x2, double y2)
 {
-if (y1 - y2 == 0)
-{
-    Console.WriteLine();
-    Console.WriteLine("Прямые совпадают");
-}
-else if (y1 / x1 == y2 / x2)
-{
-    Console.WriteLine();
-    Console.WriteLine("Прямые параллельны");
-}
-else
+    if (y1 - y2 == 0)
+    {
+        Console.WriteLine();
+        Console.WriteLine("Прямые совпадают");
+    }
+    else if (y1 / x1 == y2 / x2)
+    {
+        Console.WriteLine();
+        Console.WriteLine("Прямые параллельны");
+    }
+    else
     {
         double x = (x2 - x1) / (y1 - y2);
         double y = y1 * x + x1;

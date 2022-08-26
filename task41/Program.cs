@@ -5,15 +5,15 @@
 
 Console.WriteLine("Программа подсчета чисел больше ноля веденых пользователем");
 
-int FillArray(int[] masiv, string[] znac)
+int FillArray(int[] array, string[] sign)
 {
-    int length = masiv.Length;
+    int length = array.Length;
     int index = 0;
     int j = 0;
     while (index < length)
     {
-        masiv[index] = Convert.ToInt32(znac[index]);
-        if (masiv[index] > 0)
+        array[index] = Convert.ToInt32(sign[index]);
+        if (array[index] > 0)
         {
             j++;
         }
@@ -26,9 +26,9 @@ Console.Clear();
 
 Console.WriteLine();
 Console.WriteLine("Введите положительные и отрицательные числа через пробел: ");
-string[] masivCoord = Console.ReadLine()!.Split();
-int[] znacCoord = new int[masivCoord.Length]; 
+string[] arrayCoord = Console.ReadLine()!.Split();
+int[] signCoord = new int[arrayCoord.Length];
 
-Console.WriteLine(FillArray(znacCoord, masivCoord));
+Console.WriteLine(FillArray(signCoord, arrayCoord));
 
 
